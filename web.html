@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title >StreetARTM.D.C.</title>
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+   rel="stylesheet">
+
+   <style>
+     *{
+      margin: 0;
+      padding:0;
+      box-sizing: border-box;
+      font-family: Montserrat, sans-serif;
+     }
+
+     body {
+      background: #0f0f0f;
+      color:white;
+      overflow-x: hidden;
+     }
+
+     nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #000;
+      padding: 15px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+     }
+
+     nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+     }
+
+     header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0,0.8));
+     }
+
+     header h1 {
+      font-size: 5rem;
+      font-weight: 900;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      animation: glow 3s ease-in-out infinite alternate;
+     }
+
+     header p {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      opacity: 0.9;
+     }
+
+     @keyframes glow  {
+      from {
+        text-shadow: 0 0 10px #ff0057, 0 0 20px #00f5ff;
+      }
+      to {
+        text-shadow: 0 0 20px #ffe600, 0 0 40px #ff0057
+      }
+      0% { text-shadow: 4px 4px #ff00c8, -4px -4px #00fff9;}
+      25% { text-shadow: -4px 4px #ff00c8, 4px -4px #00fff9;}
+      50% { text-shadow: 4px -4px #ff00c8, -4px 4px #00fff9; }
+      75% { text-shadow: -4px -4px #ff00c8, 4px 4px #00fff9;}
+      100% { text-shadow: 4px 4px #ff00c8, -4px -4px #00fff9;}
+     }
+
+     section {
+      padding: 80px 10%;
+     }
+
+     .about {
+      background: #111;
+      text-align: center;
+     }
+
+     .about h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+     }
+
+     .about p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+      opacity: 0.8;
+     }
+
+     .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 80px 10%;
+      background: #000;
+     }
+
+     .gallery img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(255, 0, 200, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;  
+     }
+
+     .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 50px rgba(0, 255, 255, 0.6);
+     }
+
+     footer{
+      text-align: center;
+      padding: 40px;
+      background:#111;
+      font-size: 0.9rem;
+      opacity: 0.7;
+     }
+
+     .btn {
+      margin-top: 30px;
+      padding: 15px 40px;
+      border: none;
+      background: white;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: 0.3s ease;
+     }
+
+     .btn:hover {
+      background: black;
+      color: white;
+      border: 2px solid white;
+     }
+   </style>
+</head>
+
+<body>
+
+  <nav>
+    <div style="font-weight: 900; letter-spacing: 3px;">StreetARTM.D.C.</div>
+    <div>
+    
+    
+      <a href="index.html" >Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="donate.html">Donate</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>streetartmdc</h1>
+    <p>Urban expression ⬤ Creative Energy ⬤ Good Vibes</p>
+    <a href="gallery.html"><button class="btn">Explore art</button></a>
+  </header>
+
+  <section class="about">
+    <h2>Welcome StreetARTM.D.C.</h2>
+    <p>
+      I am an artist from Craiova, Romania, currently based in the city of Toronto. In my country I am mostly known for "dope painted murals"
+       - breathtaking tridimensional (3D), photorealistic artworks, mostly murals & canvas that radiate/express power, strength but also vulnerability. 
+       I combine abstract hues background with realistic emphasized details in order to create masterpiece portraiture pieces. 
+Recently I started developing/transforming my social media artist accounts into digital galleries in order to make my art more visible, approachable and easy to reach by many people as 
+I Intend making Street ART M.D.C. a movement within the Art world, a source of inspiration for others into art, through my passion and dedication.
+
+My passion for art was born probably around the same time as me, although not having the proper environment to evolve made me pursue this career later in life. I did finished a bachelor and masters degree in restoration and sacred art but regarding my artwork
+ I am mostly self trained. That is why, one of my special traits is that I can ( and usually do) perform my art with basically any material. 
+
+From homes to hotels, offices to outdoor murals & land marks, during my career I have been performing my art for different types of customers. I also had collaborations with big brands like :
+ Moncler, Daf, Kaufland, Julius Meinl and more. However, my biggest passion is participating in art festivals as
+ I usually perform my art as a statement and I want it to be accessible to people during process in order to bring people closer to art. One of my most known festival pieces is
+ "Seeing the future" done at ZiDArt festival with airlight purifying air paint.
+    </p>
+  </section>
+
+  <section class="gallery">
+    <img src="images/bunker3.jpg" alt="street art mural 1">
+    <img src="images/bunker2.jpg" alt="street art mural 2">
+    <img src="images/bunker.jpg" alt="street art mural 3">
+    <img src="images/bunker4.jpg" alt="street art mural 4">
+    <img src="images/bunker5.jpg" alt="street art mural 5">
+    <img src="images/bunker6.png" alt="street art mural 6">
+    <img src="images/bunker7.png" alt="street art mural 7">
+     <img src="images/bunker8.png" alt="street art mural 8">
+      <img src="images/bunker4.jpg" alt="street art mural 9">
+    <img src="images/bunker4.jpg" alt="street art mural 10">
+    <img src="images/bunker4.jpg" alt="street art mural 11">
+    <img src="images/bunker4.jpg" alt="street art mural 12">
+    <img src="images/bunker4.jpg" alt="street art mural 13">
+    <img src="images/bunker4.jpg" alt="street art mural 14">
+    <img src="images/bunker4.jpg" alt="street art mural 15">
+    <img src="images/bunker4.jpg" alt="street art mural 16">
+    <img src="images/bunker4.jpg" alt="street art mural 17">
+    <img src="images/bunker4.jpg" alt="street art mural 18">
+    <img src="images/bunker4.jpg" alt="street art mural 19">
+    <img src="images/bunker4.jpg" alt="street art mural 20">
+    <img src="images/bunker4.jpg" alt="street art mural 21">
+    <img src="images/bunker4.jpg" alt="street art mural 22">
+    <img src="images/bunker4.jpg" alt="street art mural 23">
+    
+  </section>
+
+  <footer>
+    Ⓒ 2026 StreetARTM.D.C. - All Rights Reserved.
+  </footer>
+
+</body>
+</html>

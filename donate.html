@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support My Mission</title>
+
+
+<style>
+
+  nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 8%;
+  margin-right: 120px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.9);
+  z-index:1000;
+ 
+}
+
+
+.logo{
+  font-weight:900;
+  letter-spacing:3px;
+    margin-left: 100px;
+    color: white;
+  
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-size:0.9rem;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#ff00cc;
+}
+
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* FULL BACKGROUND */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #3333ff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* DONATION CARD */
+.donate-container {
+  width: 100%;
+  max-width: 500px;
+  background: #ff00cc;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+/* GLOW ANIMATION */
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #ff0057, 0 0 20px #00f5ff; }
+  50% { text-shadow: 0 0 20px #ffe600, 0 0 40px #ff0057; }
+  100% { text-shadow: 0 0 10px #00fff9, 0 0 30px #ff00c8; }
+}
+
+.donate-container h2 {
+  margin-bottom: 10px;
+  font-size: 30px;
+  animation: glow 2s infinite alternate;
+  color: white;
+}
+
+.donate-container p {
+  margin-bottom: 25px;
+  color: black;
+  font-size: 16px;
+}
+
+/* AMOUNT GRID */
+.donation-amounts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.amount-btn {
+  padding: 14px;
+  border: 2px solid white;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.amount-btn:hover,
+.amount-btn.active {
+  background: white;
+  color: black;
+  border: 2px solid black;
+}
+
+/* CUSTOM INPUT */
+.custom-amount input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* DONATE BUTTON */
+.donate-btn {
+  width: 100%;
+  padding: 16px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.donate-btn:hover {
+  background: #218838;
+  transform: scale(1.03);
+}
+
+.secure-note {
+  font-size: 14px;
+  margin-top: 15px;
+  color: black;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+</style>
+</head>
+
+  <nav>
+  <div class="logo">StreetARTM.D.C.</div>
+ 
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="donate.html">Donate</a>
+  </div>
+</nav>
+
+<body>
+
+
+<div class="donate-container">
+  <h2>Support My Mission</h2>
+  <p>Your contribution helps me continue my work and make a real difference.</p>
+  
+
+  <div class="donation-amounts">
+    <button class="amount-btn" data-amount="10">$10</button>
+    <button class="amount-btn" data-amount="25">$25</button>
+    <button class="amount-btn" data-amount="50">$50</button>
+    <button class="amount-btn" data-amount="100">$100</button>
+  </div>
+
+  <div class="custom-amount">
+    <input type="number" id="customAmount" placeholder="Enter custom amount" min="1">
+  </div>
+
+  <div class="error-message" id="errorMessage"></div>
+
+  <button class="donate-btn" onclick="processDonation()">Donate Now</button>
+
+  <p class="secure-note">🔒 Secure payment processing</p>
+</div>
+
+<script>
+
+const buttons = document.querySelectorAll('.amount-btn');
+const customInput = document.getElementById('customAmount');
+const errorMessage = document.getElementById('errorMessage');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+    customInput.value = button.dataset.amount;
+  });
+});
+
+function processDonation() {
+  const amount = customInput.value;
+
+  if (!amount || amount <= 0) {
+    errorMessage.textContent = "Please enter a valid donation amount.";
+    return;
+  }
+
+  errorMessage.textContent = "";
+
+  // Replace this with your real Stripe/PayPal link
+  window.location.href = "https://your-payment-link.com?amount=" + amount;
+}
+
+</script>
+
+</body>
+</html>

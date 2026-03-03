@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | StreetARTM.D.C.</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0472969f92.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Montserrat, sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: white;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #000;
+      padding: 15px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    header {
+      padding-top: 120px;
+      text-align: center;
+      padding-bottom: 40px;
+      background: linear-gradient(135deg, #ff00cc, #3333ff);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    .contact-section {
+      padding: 80px 10%;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea {
+      padding: 15px;
+      border-radius: 10px;
+      border: none;
+      background: #1a1a1a;
+      color: white;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: none;
+      height: 150px;
+    }
+
+    button {
+      padding: 15px;
+      border: none;
+      background: white;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: black;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .social {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .social a {
+      color: #ff00cc;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: #111;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-top: 60px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #000;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        display: none;
+      }
+
+      .nav-links a {
+        padding: 15px 0;
+        display: block;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .contact-section {
+        padding: 60px 6%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <img src="/images/logo2.png" width="60px">
+    <div class="logo">StreetARTM.D.C.</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="donate.html">Donate</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Contact</h1>
+  </header>
+
+  <section class="contact-section">
+    <h2>Let's Create Something Powerful</h2>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="your email  @example" required >
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit" ><a href="streetartmdc@gmail.com" required></a>Send Message</button>
+    </form>
+
+    <div class="social">
+      
+      <p>Or reach out directly:</p>
+      <br>
+      <a href="https://www.instagram.com/morarudorucatalin/" target="_blank">
+        <i class="fa-brands fa-instagram fa-xl"></i>Instagram</a>
+      <a href="https://www.facebook.com/moraru.catalin.395?locale=ro_RO" target="_blank">
+        <i class="fa-brands fa-facebook fa-xl"></i>Facebook</a>
+      <a href="https://www.tiktok.com/@streetwarezart" target="_blank">
+        <i class="fa-brands fa-tiktok fa-xl"></i>TikTok</a>
+      <a href="https://www.youtube.com/@StreetArtMDC" target="_blank">
+        <i class="fa-brands fa-youtube fa-xl"></i>Youtube</a>
+    </div>
+
+  </section>
+
+  <footer>
+    Ⓒ 2026 StreetARTM.D.C. - All Rights Reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("navLinks");
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
+      }
+    }
+  </script>
+
+</body>
+</html>

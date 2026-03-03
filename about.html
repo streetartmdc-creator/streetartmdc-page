@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | StreetARTM.D.C.</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Montserrat, sans-serif;
+}
+
+body{
+  background:#0f0f0f;
+  color:white;
+}
+
+/* NAVIGATION */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#000;
+  padding:15px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+}
+
+.logo{
+  font-weight:900;
+  letter-spacing:3px;
+}
+
+.nav-links{
+  display:flex;
+  gap:25px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-size:0.9rem;
+}
+
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* HEADER SECTION */
+.hero{
+  height:60vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(135deg,#ff00cc,#3333ff);
+  padding-top:60px;
+}
+
+.hero h1{
+  font-size:3rem;
+  font-weight:900;
+  letter-spacing:5px;
+  text-transform:uppercase;
+}
+
+/* CONTENT SECTION */
+.about-container{
+  padding:100px 10%;
+  max-width:1000px;
+  margin:auto;
+  line-height:1.7;
+  font-size:1rem;
+  opacity:0.9;
+}
+
+.about-container h2{
+  margin-bottom:20px;
+  font-size:2rem;
+}
+
+.about-container p{
+  margin-bottom:20px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  background:#111;
+  font-size:0.9rem;
+  opacity:0.7;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.hero h1{
+  font-size:2rem;
+}
+
+.about-container{
+  padding:80px 6%;
+}
+
+.nav-links{
+  position:absolute;
+  top:60px;
+  right:0;
+  background:#000;
+  flex-direction:column;
+  width:100%;
+  text-align:center;
+  padding:20px 0;
+  display:none;
+}
+
+.nav-links a{
+  padding:15px 0;
+  display:block;
+}
+
+.menu-toggle{
+  display:block;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <img src="/images/logo2.png" width="60px">
+  <div class="logo">StreetARTM.D.C.</div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="donate.html">Donate</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>About The Artist</h1>
+</section>
+
+<section class="about-container">
+
+<h2>The Story Behind StreetARTM.D.C.</h2>
+
+<p>
+Born in Craiova, Romania and currently based in Toronto, StreetARTM.D.C. represents a fusion of raw urban expression and refined artistic technique.
+</p>
+
+<p>
+With academic training in restoration and sacred art, combined with strong self-taught discipline, the artistic journey evolved into large-scale murals, hyper-realistic portraiture and expressive 3D compositions.
+</p>
+
+<p>
+The work focuses on emotional intensity — blending abstract backgrounds with realistic detail to create powerful visual statements that reflect strength, vulnerability and identity.
+</p>
+
+<p>
+From private homes to hotels, offices, landmarks and international festivals, each artwork is designed not only to decorate space — but to transform it.
+</p>
+
+<p>
+Collaborations have included major brands and public events, with one of the most recognized festival pieces being "Seeing the Future", created using air-purifying paint technology.
+</p>
+
+<p>
+StreetARTM.D.C. is not just art — it is a movement dedicated to bringing people closer to creativity through live performance, storytelling and immersive visual impact.
+</p>
+
+</section>
+
+<footer>
+Ⓒ 2026 StreetARTM.D.C. - All Rights Reserved.
+</footer>
+
+<script>
+function toggleMenu(){
+  var menu=document.getElementById("navLinks");
+  if(menu.style.display==="flex"){
+    menu.style.display="none";
+  }else{
+    menu.style.display="flex";
+  }
+}
+</script>
+
+</body>
+</html>
